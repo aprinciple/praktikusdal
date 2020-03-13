@@ -1,0 +1,14 @@
+#page {
+  scroll-behavior: smooth;
+}
+
+.page {
+  background-color: $grey;
+  font-family: 'Circe', Tahoma, sans-serif; 
+
+  &__header {
+  }
+
+  &__main {
+  }
+}

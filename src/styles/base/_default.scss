@@ -1,0 +1,153 @@
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+  display: none; 
+}
+
+input[type=search]::-ms-clear {  
+  display: none; 
+  width: 0;
+  height: 0; 
+}
+
+input[type=search]::-ms-reveal {  
+  display: none;
+  width: 0;
+  height: 0; 
+}
+
+picture {
+  display: block;
+}
+
+figure, figcaption {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 30px;
+
+  @media (min-width: $md) {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  
+  @media (min-width: $lg) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  
+  @media (min-width: $xl) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+
+  @media (min-width: $md) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  @media (min-width: $lg) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  
+  @media (min-width: $xl) {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 26px;
+
+  @media (min-width: $md) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  
+  @media (min-width: $lg) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  
+  @media (min-width: $xl) {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $md) {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $lg) {
+    width: 1125px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $xl) {
+    width: 1520px;
+  }
+}

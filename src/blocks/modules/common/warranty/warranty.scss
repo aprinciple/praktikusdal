@@ -1,0 +1,224 @@
+.warranty {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: $lightblue;
+
+  @media (min-width: $md) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  @media (min-width: $lg) {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    overflow: hidden;
+  }
+  
+  @media (min-width: $xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &::after {
+    content: none;
+
+    @media (min-width: $lg) {
+      content: '';
+      position: absolute;
+      top: 10%;
+      right: -310px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background-color: $blue;
+    }
+  }
+
+  &__container {}
+
+  &__title {}
+
+  &__list {
+    margin-bottom: 40px;
+    counter-reset: item;
+    
+    @media (min-width: $lg) {
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 50px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 53px;
+    padding-left: 65px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+    
+    @media (min-width: $lg) {
+      height: 63px;
+      padding-left: 80px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    &::before {
+      counter-increment: item;
+      content: counter(item);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 100%;
+      background-color: $gold;
+      font-size: 18px;
+      color: #000;
+
+      @media (min-width: $lg) {
+        width: 60px;
+        font-size: 24px;
+      }
+    }
+
+    &:nth-child(even)::before {
+      background-color: #fff;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 25px 0 25px;
+      border-color: $gold transparent transparent transparent;
+      z-index: 1;
+
+      @media (min-width: $lg) {
+        bottom: -10px;
+        border-width: 10px 30px 0 30px;
+      }
+    }
+
+    &:nth-child(even)::after {
+      border-color: #fff transparent transparent transparent;
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 20px;
+
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 60px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 80px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    & p {
+      margin-bottom: 10px;
+      font-size: inherit;
+      line-height: inherit;
+
+      @media (min-width: $md) {
+        margin-bottom: 15px;
+      }
+      
+      @media (min-width: $lg) {
+        margin-bottom: 20px;
+      }
+      
+      @media (min-width: $xl) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__footer {}
+
+  &__footer-item {
+    margin-bottom: 30px;
+
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 50px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__footer-title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+
+    @media (min-width: $md) {
+      margin-bottom: 25px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 30px;
+      font-size: 36px;
+      line-height: 42px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 40px;
+      font-size: 42px;
+      line-height: 48px;
+    }
+  }
+
+  &__footer-image {
+    margin: 0 auto;
+  }
+}

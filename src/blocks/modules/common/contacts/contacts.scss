@@ -1,0 +1,27 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  border-left: 1px solid #5B5B5B;
+
+  &__item {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    transition: color 0.3s;
+
+    @media (min-width: $lg) {
+      margin-bottom: 5px;
+    }
+
+    &:hover,
+    &:active {
+      color: $gold;
+    }
+
+    &:active {
+      color: $darkgold;
+    }
+  }
+}

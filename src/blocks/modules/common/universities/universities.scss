@@ -1,0 +1,82 @@
+.universities {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $grey;
+
+
+  @media (min-width: $md) {
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+  
+  @media (min-width: $lg) {
+    padding-top: 70px;
+    padding-bottom: 120px;
+  }
+  
+  @media (min-width: $xl) {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $lg) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    transition: color 0.3s;
+
+    @media (min-width: $md) {
+      width: 45%;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $lg) {
+      width: 30%;
+      margin-right: 5%;
+      margin-bottom: 35px;
+      font-size: 24px;
+      line-height: 28px;
+      word-break: break-all;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 50px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &:hover {
+      color: $gold;
+    }
+
+    &:active {
+      color: $darkgold;
+    }
+  }
+}

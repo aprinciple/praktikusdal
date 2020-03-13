@@ -1,0 +1,20 @@
+.form-request {
+
+  @media (min-width: $md) {
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: $lg) {
+    width: 360px;
+    margin: 0;
+  }
+  
+  @media (min-width: $xl) {
+    width: 450px;
+  }
+
+  &__button {
+    text-transform: uppercase;
+  }
+}

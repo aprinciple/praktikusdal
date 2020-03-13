@@ -1,0 +1,260 @@
+.reviews {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: $grey;
+  overflow: hidden;
+
+  @media (min-width: $md) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  @media (min-width: $lg) {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    overflow: hidden;
+  }
+  
+  @media (min-width: $xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    margin-bottom: 40px;
+
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 70px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 90px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @media (min-width: $md) {
+      margin-bottom: 30px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__rating {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__rating-text {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+
+    @media (min-width: $md) {
+      font-size: 19px;
+      line-height: 24px;
+    }
+    
+    @media (min-width: $lg) {
+      font-size: 21px;
+      line-height: 25px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__items {
+    
+    @media (min-width: $md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    @media (min-width: $md) {
+      width: 48%;
+    }
+    
+    @media (min-width: $lg) {
+      width: 31.5%;
+    }
+    
+    @media (min-width: $xl) {
+      
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__footer {
+    position: relative;
+    margin-top: 40px;
+
+    @media (min-width: $md) {
+      margin-top: 50px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-top: 60px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-top: 80px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 75px;
+      height: 75px;
+      background-image: url('../img/hand-ok.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      
+      @media (min-width: $lg) {
+        width: 300px;
+        height: 300px;
+      }
+      
+      @media (min-width: $xl) {
+        width: 370px;
+        height: 370px;
+      }
+    }
+
+    &::before {
+      bottom: -60px;
+
+      @media (min-width: $lg) {
+        bottom: -200px;
+        left: 40px;
+      }
+
+      @media (min-width: $xl) {
+        bottom: -250px;
+        left: 75px;
+      }
+    }
+
+    &::after {
+      bottom: -40px;
+      left: auto;
+      right: 0;
+      transform: scaleX(-1);
+
+      @media (min-width: $lg) {
+        bottom: -150px;
+        right: 40px;
+      }
+
+      @media (min-width: $xl) {
+        bottom: -200px;
+        right: 75px;
+      }
+    }
+  }
+
+  &__footer-title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    @media (min-width: $md) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 15px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 20px;
+      font-size: 38px;
+      line-height: 42px;
+    }
+  }
+
+  &__footer-count {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    filter: drop-shadow( 0 0 5px #ccc);
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 42px;
+    text-align: center;
+
+    @media (min-width: $md) {
+      font-size: 48px;
+      line-height: 54px;
+    }
+    
+    @media (min-width: $lg) {
+      padding: 10px 55px;
+      font-size: 54px;
+      line-height: 60px;
+    }
+    
+    @media (min-width: $xl) {
+      padding: 10px 75px;
+      font-size: 64px;
+      line-height: 70px;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 0;
+      border-color: #fff transparent transparent transparent;
+
+      @media (min-width: $lg) {
+        bottom: -10px;
+        border-width: 15px 15px 0 0;
+      }
+    }
+  }
+}
